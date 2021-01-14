@@ -1,0 +1,630 @@
+{
+  "canvas": {
+    "width": 2000,
+    "height": 2000,
+    "scrollTop": 0,
+    "scrollLeft": 0,
+    "show": {
+      "tableComment": true,
+      "columnComment": true,
+      "columnDataType": true,
+      "columnDefault": true,
+      "columnAutoIncrement": true,
+      "columnPrimaryKey": true,
+      "columnUnique": false,
+      "columnNotNull": true,
+      "relationship": true
+    },
+    "database": "MySQL",
+    "databaseName": "Log-Service-ER",
+    "canvasType": "ERD",
+    "language": "GraphQL",
+    "tableCase": "pascalCase",
+    "columnCase": "camelCase",
+    "setting": {
+      "relationshipDataTypeSync": true,
+      "columnOrder": [
+        "columnName",
+        "columnDataType",
+        "columnNotNull",
+        "columnUnique",
+        "columnAutoIncrement",
+        "columnDefault",
+        "columnComment"
+      ]
+    }
+  },
+  "table": {
+    "tables": [
+      {
+        "name": "Action",
+        "comment": "This table will store a catalog of actions",
+        "columns": [
+          {
+            "name": "id_action",
+            "comment": "must be PK",
+            "dataType": "uuid",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 70,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "9e2f9b04-1051-c43c-bded-b3adabb789df"
+          },
+          {
+            "name": "action_name",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 76,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "8cb6e1a9-d816-fc0e-d494-810be06cb4e5"
+          },
+          {
+            "name": "description",
+            "comment": "",
+            "dataType": "LONGTEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 64,
+              "widthComment": 60,
+              "widthDataType": 72,
+              "widthDefault": 60
+            },
+            "id": "ca5caf3e-57bd-dc48-5894-923c30438b33"
+          },
+          {
+            "name": "id_action_type",
+            "comment": "must be  PK",
+            "dataType": "uuid",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 86,
+              "widthComment": 70,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "cb8ff623-88b4-74c1-f69c-3d338b1001a2"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 13.000000596046391,
+          "top": 68.16666669978036,
+          "zIndex": 169,
+          "widthName": 60,
+          "widthComment": 228
+        },
+        "id": "1cf952db-acbf-5e2a-2726-7f5743f43eb3"
+      },
+      {
+        "name": "Action_Type",
+        "comment": "This entity will store a catalog of action types",
+        "columns": [
+          {
+            "name": "id_action_type",
+            "comment": "must be  PK",
+            "dataType": "uuid",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 86,
+              "widthComment": 70,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "5ea83551-b7d6-3933-743d-06def2acb577"
+          },
+          {
+            "name": "description",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 64,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "90f9c3e2-a7ce-253a-0142-d66ad4b5e33b"
+          },
+          {
+            "name": "action_type_name",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 109,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "619c2d6e-e0fe-923e-0279-5953a4ea2970"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 536.8333362804517,
+          "top": 40.66666242811459,
+          "zIndex": 170,
+          "widthName": 74,
+          "widthComment": 260
+        },
+        "id": "adb2840c-eaa8-7d36-45ce-660f3d93bf1b"
+      },
+      {
+        "name": "Module",
+        "comment": "This entity will store data of platform modules",
+        "columns": [
+          {
+            "name": "id_module",
+            "comment": "must be PK",
+            "dataType": "uuid",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 62,
+              "widthComment": 70,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "3e822df7-4ef7-2425-9ae8-3e9defbb2a66"
+          },
+          {
+            "name": "module_name",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 85,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "3cdeaa88-16d7-b366-d8af-4ca1c6c13bf3"
+          },
+          {
+            "name": "description",
+            "comment": "would be used for tooltip",
+            "dataType": "LONGTEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 64,
+              "widthComment": 143,
+              "widthDataType": 72,
+              "widthDefault": 60
+            },
+            "id": "c7d28980-a22e-b3e0-39f7-d697fb97f8b6"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 703.166667494509,
+          "top": 353.99998768170735,
+          "zIndex": 173,
+          "widthName": 60,
+          "widthComment": 262
+        },
+        "id": "801ca54b-4301-3437-498b-4d8e8cfd3371"
+      },
+      {
+        "name": "Event",
+        "comment": "This will store the tracking data for user movement on the platform",
+        "columns": [
+          {
+            "name": "id_event",
+            "comment": "Must be PK",
+            "dataType": "uuid",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 69,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "0a52b65d-5059-bc04-3116-ff8e85096beb"
+          },
+          {
+            "name": "id_user",
+            "comment": "Must be PK",
+            "dataType": "uuid",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 69,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "e43dab02-c4ac-cdcd-008e-783c79518f07"
+          },
+          {
+            "name": "id_module",
+            "comment": "must be PK",
+            "dataType": "uuid",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 62,
+              "widthComment": 70,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "19b7d0ca-7115-66e4-be91-87eeaa535ed6"
+          },
+          {
+            "name": "id_action",
+            "comment": "must be PK",
+            "dataType": "uuid",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 70,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "869e5e2a-c4cb-678a-eb19-b45f2f42bec9"
+          },
+          {
+            "name": "event_date",
+            "comment": "Specific date and time when an event happen",
+            "dataType": "DATETIME",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 66,
+              "widthComment": 265,
+              "widthDataType": 67,
+              "widthDefault": 60
+            },
+            "id": "6504d05d-2556-a998-962d-9c6ab5d8ff71"
+          },
+          {
+            "name": "message_log",
+            "comment": "Specific log for the event",
+            "dataType": "LONGTEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 79,
+              "widthComment": 144,
+              "widthDataType": 72,
+              "widthDefault": 60
+            },
+            "id": "04af68b5-eaf5-4707-6dd6-0a27e5eebbfb"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 0,
+          "top": 317,
+          "zIndex": 171,
+          "widthName": 60,
+          "widthComment": 383
+        },
+        "id": "7b284050-3fb7-a72a-a743-159cd82bb3ad"
+      },
+      {
+        "name": "User",
+        "comment": "This entity already exist in ADMIN RADIX DB",
+        "columns": [
+          {
+            "name": "id_user",
+            "comment": "Must be PK",
+            "dataType": "uuid",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 69,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "9051ce25-99a2-bb90-baec-a2b090330894"
+          },
+          {
+            "name": "user_name",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 67,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "3a36d848-49e6-41f3-d6e9-5a2d86b957d4"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 470,
+          "top": 183,
+          "zIndex": 172,
+          "widthName": 60,
+          "widthComment": 261
+        },
+        "id": "e2cb3d99-0a76-e299-b578-555577072e8a"
+      }
+    ],
+    "indexes": []
+  },
+  "memo": {
+    "memos": []
+  },
+  "relationship": {
+    "relationships": [
+      {
+        "identification": false,
+        "start": {
+          "tableId": "e2cb3d99-0a76-e299-b578-555577072e8a",
+          "columnIds": [
+            "9051ce25-99a2-bb90-baec-a2b090330894"
+          ],
+          "x": 661.5,
+          "y": 293,
+          "direction": "bottom"
+        },
+        "end": {
+          "tableId": "7b284050-3fb7-a72a-a743-159cd82bb3ad",
+          "columnIds": [
+            "e43dab02-c4ac-cdcd-008e-783c79518f07"
+          ],
+          "x": 603,
+          "y": 365,
+          "direction": "right"
+        },
+        "id": "eee7e4ee-f997-971a-7a65-7fb1da15a096",
+        "relationshipType": "OneN"
+      },
+      {
+        "identification": false,
+        "start": {
+          "tableId": "801ca54b-4301-3437-498b-4d8e8cfd3371",
+          "columnIds": [
+            "3e822df7-4ef7-2425-9ae8-3e9defbb2a66"
+          ],
+          "x": 703.166667494509,
+          "y": 419.24998768170735,
+          "direction": "left"
+        },
+        "end": {
+          "tableId": "7b284050-3fb7-a72a-a743-159cd82bb3ad",
+          "columnIds": [
+            "19b7d0ca-7115-66e4-be91-87eeaa535ed6"
+          ],
+          "x": 603,
+          "y": 461,
+          "direction": "right"
+        },
+        "id": "e35e5d41-103e-c76f-e245-02b69e893dc0",
+        "relationshipType": "OneN"
+      },
+      {
+        "identification": false,
+        "start": {
+          "tableId": "adb2840c-eaa8-7d36-45ce-660f3d93bf1b",
+          "columnIds": [
+            "5ea83551-b7d6-3933-743d-06def2acb577"
+          ],
+          "x": 536.8333362804517,
+          "y": 105.91666242811459,
+          "direction": "left"
+        },
+        "end": {
+          "tableId": "1cf952db-acbf-5e2a-2726-7f5743f43eb3",
+          "columnIds": [
+            "cb8ff623-88b4-74c1-f69c-3d338b1001a2"
+          ],
+          "x": 428.0000005960464,
+          "y": 143.66666669978036,
+          "direction": "right"
+        },
+        "id": "499dc1d3-cb3c-eade-4f62-4daa2aef8431",
+        "relationshipType": "OneN"
+      },
+      {
+        "identification": false,
+        "start": {
+          "tableId": "1cf952db-acbf-5e2a-2726-7f5743f43eb3",
+          "columnIds": [
+            "9e2f9b04-1051-c43c-bded-b3adabb789df"
+          ],
+          "x": 220.5000005960464,
+          "y": 219.16666669978036,
+          "direction": "bottom"
+        },
+        "end": {
+          "tableId": "7b284050-3fb7-a72a-a743-159cd82bb3ad",
+          "columnIds": [
+            "869e5e2a-c4cb-678a-eb19-b45f2f42bec9"
+          ],
+          "x": 301.5,
+          "y": 317,
+          "direction": "top"
+        },
+        "id": "0e2ed4e9-8a4a-f319-a252-4dec05a0b23f",
+        "relationshipType": "OneN"
+      }
+    ]
+  }
+}
